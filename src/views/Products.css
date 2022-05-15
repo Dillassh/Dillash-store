@@ -1,0 +1,27 @@
+.container_product_page, h1 {
+    padding-top: 150px;
+    display: flex;
+  
+}
+
+.container_product_page {
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 440px) {
+.container_product_page {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    
+}
+}
+
+
+h1 {
+    width: 350px;
+}

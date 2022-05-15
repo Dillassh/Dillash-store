@@ -1,0 +1,43 @@
+.carousel {
+    
+    padding-top: 105px;
+    
+}
+
+.carousel > img {
+    max-width: 100%;
+    
+}
+
+#carousel-content {
+    position: absolute;
+    top: 25vh;
+    text-align: left;
+    max-width: 300px;
+    color: rgba(48, 45, 45, 0.925);
+    
+}
+
+#carousel-content > button {
+    background-color: none;
+    padding: 5px 25px 5px 25px;
+    border: 1.5px solid black;
+    transition: 0.4s;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#carousel-content>button:hover {
+    opacity: 0.7;
+}
+
+#carousel-content>button:active {
+    opacity: 0.4;
+}
+
+@media (max-width: 768px) {
+    #carousel-content{
+        
+     }
+}
+

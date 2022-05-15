@@ -1,0 +1,27 @@
+.categories {
+    width: 400px;
+    margin-bottom: 20px;
+    position: fixed;
+    left: 0;
+}
+
+.center_categories {
+   text-align: center;
+}
+
+.center_categories > button {
+    width: 250px;
+    background-color: rgba(206, 206, 206, 0.274);
+    border: 1px solid black;
+    border-radius: 2px;
+    transition: 0.4s;
+    margin: 10px;
+}
+
+.center_categories>button:hover {
+    opacity: 0.7;
+}
+
+.center_categories>button:active {
+    opacity: 0.4;
+}

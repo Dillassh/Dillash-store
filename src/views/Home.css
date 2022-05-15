@@ -1,0 +1,10 @@
+.container > img {
+   max-width:75vw;
+   padding-top: 100px;
+}
+
+.container > h3 {
+   text-align: center;
+   margin: 50px;
+   margin-bottom: 0;
+}

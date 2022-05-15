@@ -1,0 +1,59 @@
+.container-card {
+    margin: 10px;
+    margin-top: 40px;
+width: 250px;
+border: 1px solid rgb(124, 121, 121);
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+
+}
+
+.container-card > img {
+    height: 200px;
+   max-width: 220px;
+    margin: 15px auto;
+}
+
+.container-card > h3 {
+    font-size: 15px;
+    height: 60px;
+    margin: 10px;
+}
+
+.container-card > p {
+    font-size: 30px;
+  
+  
+    
+  
+}
+
+
+
+.price_wishlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    margin: 10px;
+}
+
+.price_wishlist > p {
+    margin-top: 12px;
+}
+
+@media (max-width: 440px) {
+    .container-card  {
+    width: 100%;
+   
+      
+    }
+
+    .container-card > img {
+        margin: 20px auto;
+        max-height: 380px;
+        max-width: 100%;
+    }
+}

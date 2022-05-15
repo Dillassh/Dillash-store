@@ -1,0 +1,9 @@
+.container-trending > h3 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.container-trending {
+    display: flex;
+    justify-content: center;
+}
