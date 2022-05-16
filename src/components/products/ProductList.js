@@ -1,4 +1,4 @@
-import Card from "./products/Card";
+import Card from "../Card";
 import "./ProductList.css";
 
 function ProductList({ products }) {

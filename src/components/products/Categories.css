@@ -1,8 +1,7 @@
 .categories {
     width: 400px;
     margin-bottom: 20px;
-    position: fixed;
-    left: 0;
+   
 }
 
 .center_categories {
@@ -24,4 +23,12 @@
 
 .center_categories>button:active {
     opacity: 0.4;
+}
+
+@media (min-width: 600px) {
+    .categories {
+           
+            position: fixed;
+            left: 0;
+        }
 }

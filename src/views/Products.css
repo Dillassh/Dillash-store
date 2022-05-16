@@ -1,9 +1,14 @@
-.container_product_page, h1 {
+ .container_product_page{
     padding-top: 150px;
     display: flex;
   
 }
 
+.products_container {
+padding-top: 150px;
+}
+
+/*
 .container_product_page {
     width: 100%;
    
@@ -24,4 +29,4 @@
 
 h1 {
     width: 350px;
-}
+} */
