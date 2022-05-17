@@ -1,17 +1,17 @@
 import "./TrendingList.css";
 import Card from "../Card";
 
-function CategotyList({ categories }) {
+function TrendingList({ categories }) {
 	return (
 		<div className='list_container'>
 			<div className='card_list'>
-				{categories.map((category, index) => {
+				{categories.map((trending, index) => {
 					return (
 						<Card
-							key={"category_" + index}
-							img={category.image}
-							title={category.title}
-							price={category.price}></Card>
+							key={"trending_" + index}
+							img={trending.image}
+							title={trending.title}
+							price={trending.price}></Card>
 					);
 				})}
 			</div>
@@ -19,4 +19,4 @@ function CategotyList({ categories }) {
 	);
 }
 
-export default CategotyList;
+export default TrendingList;

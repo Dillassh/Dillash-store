@@ -7,6 +7,7 @@ function Card(props) {
 			<h3>{props.title}</h3>
 			<div className='price_wishlist'>
 				<p>{props.price} $</p>
+				<p>{props.category}</p>
 				<button>Add to Wishlist!</button>
 			</div>
 		</div>
