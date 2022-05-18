@@ -1,0 +1,30 @@
+.cards_category > img {
+    max-width:350px;
+    max-height: 180px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.category_container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 0px;
+   
+}
+
+.cards_text > h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.cards_text {
+    position: relative;
+    top: -150px;
+    left: 30px;
+}
+
+.cards_category {
+    margin: 10px;
+    margin-bottom: -60px;
+}

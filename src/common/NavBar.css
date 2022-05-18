@@ -27,11 +27,11 @@ a {
 
 .topNav > a > img {
     width: 170px;
-    position: absolute;
+    
    
-    left: 42%;
+   
    text-align: center;
-    top: 0;
+ top: 3px;
    
    
     
@@ -77,7 +77,5 @@ a {
  transform: scaleX(1);
  transform-origin: left;
 }
-
-
 
 

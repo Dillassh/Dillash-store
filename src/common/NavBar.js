@@ -12,9 +12,11 @@ function NavBar() {
 					Products
 				</a>
 			</div>
-			<a href='./'>
+
+			<a className='col-sm-5' href='./'>
 				<img src={logoDilla} alt='Logo' />
 			</a>
+
 			<a className='wish nav_link' href='./wishlist'>
 				Wishlist(1)
 			</a>

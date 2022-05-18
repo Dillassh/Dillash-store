@@ -1,0 +1,9 @@
+.trending_cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card_trending {
+   width: 350px;
+}

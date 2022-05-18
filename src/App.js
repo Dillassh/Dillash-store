@@ -21,7 +21,6 @@ function App() {
 					<Route path='/products' element={<Products />} />
 					<Route path='/wishlist' element={<WishList />} />
 				</Switch>
-				<BotomNav />
 			</Router>
 		</div>
 	);

@@ -3,14 +3,16 @@ import Card from "../Card";
 
 function TrendingList({ trendings }) {
 	return (
-		<div>
+		<div className='trending_cards'>
 			{trendings.map((trending, index) => {
 				return (
-					<Card
-						key={"trending_" + index}
-						img={trending.image}
-						title={trending.title}
-						price={trending.price}></Card>
+					<div className='card_trending'>
+						<Card
+							key={"trending_" + index}
+							img={trending.image}
+							title={trending.title}
+							price={trending.price}></Card>
+					</div>
 				);
 			})}
 		</div>

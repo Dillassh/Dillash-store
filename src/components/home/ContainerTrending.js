@@ -17,7 +17,9 @@ function ContainerTrending() {
 	});
 
 	return (
-		<>{trendings ? <TrendingList trendings={trendings} /> : <Loading />}</>
+		<div className='row justify-content-center mt-5'>
+			{trendings ? <TrendingList trendings={trendings} /> : <Loading />}
+		</div>
 	);
 }
 

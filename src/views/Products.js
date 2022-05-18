@@ -1,91 +1,17 @@
-import React, { useEffect, useState } from "react";
-import Loading from "../components/Loading";
-import Card from "../components/Card";
+import BotomNav from "../common/bottomNav";
+import ProductList from "../components/products/ProductsList";
+import "./Products.css";
 
-const Products = () => {
-	const [data, setData] = useState([]);
-	const [filter, setFilter] = useState([data]);
-	const [loading, setLoading] = useState(false);
-	let responseValid = true;
+function Products() {
+	return (
+		<>
+			<div className='products_container'>
+				<ProductList />
+			</div>
 
-	useEffect(() => {
-		const getProducts = async () => {
-			setLoading(true);
-			const response = await fetch("https://fakestoreapi.com/products");
-			if (responseValid) {
-				setData(await response.clone().json());
-				setFilter(await response.json());
-				setLoading(false);
-			}
-			return () => {
-				responseValid = false;
-			};
-		};
-		getProducts();
-	}, []);
-
-	const filterProduct = (cat) => {
-		const updatedList = data.filter((item) => item.category === cat);
-		setFilter(updatedList);
-	};
-
-	const ShowProducts = () => {
-		return (
-			<>
-				<div className='container-fluid '>
-					<div className='row mt-5'>
-						<div className='col-md-3 mt-5  '>
-							<button
-								className='btn btn-outline-dark w-100 mb-4'
-								onClick={() => setFilter(data)}>
-								All
-							</button>
-							<button
-								className='btn btn-outline-dark w-100 mb-4'
-								onClick={() => filterProduct("men's clothing")}>
-								Men's clothing
-							</button>
-							<button
-								className='btn btn-outline-dark w-100 mb-4'
-								onClick={() => filterProduct("women's clothing")}>
-								Women's clothing
-							</button>
-							<button
-								className='btn btn-outline-dark w-100 mb-4'
-								onClick={() => filterProduct("electronics")}>
-								Electronics
-							</button>
-							<button
-								className='btn btn-outline-dark w-100 mb-4'
-								onClick={() => filterProduct("jewelery")}>
-								Jewelery
-							</button>
-						</div>
-						<div className='col-md-9'>
-							<div className='row'>
-								{filter.map((product, index) => {
-									return (
-										<>
-											<div className='col-md-4 mb-4'>
-												<Card
-													key={"product_" + index}
-													img={product.image}
-													category={product.category}
-													title={product.title}
-													price={product.price}></Card>
-											</div>
-										</>
-									);
-								})}
-							</div>
-						</div>
-					</div>
-				</div>
-			</>
-		);
-	};
-
-	return <div className='mt-5'>{loading ? <Loading /> : <ShowProducts />}</div>;
-};
+			<BotomNav />
+		</>
+	);
+}
 
 export default Products;

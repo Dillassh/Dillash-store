@@ -3,12 +3,13 @@
    padding-top: 100px;
 }
 
-/* .container > h1 {
-   text-align: center;
-   margin: 50px;
-   margin-bottom: 0;
-} */
+.container {
+   overflow-x: hidden;
+}
 
+.trending_title {
+   margin-top: 40px;
+}
 
 
 .trending_title > h1 {
@@ -27,7 +28,7 @@ grid-gap: 22px;
    content: " ";
    display: block;
   border-top: 17px solid rgba(255, 255, 255, 0);
-   border-bottom: 2px solid rgb(83, 83, 83); 
+   border-bottom: 2px solid rgb(168, 168, 168); 
    background-color: #ffffff;
 }
 

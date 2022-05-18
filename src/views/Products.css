@@ -1,3 +1,14 @@
-.buttn > button {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+.products_container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 70px;
 }
+
+@media (max-width: 500px) {
+    .products_container {
+            margin-left: 0;
+            margin-right: 0;
+        }
+}
+
+
