@@ -1,26 +1,24 @@
 import "./ContainerTrending.css";
 import { useEffect, useState } from "react";
 import Loading from "../Loading";
-import CategoryList from "./TrendingList";
+import TrendingList from "./TrendingList";
 
-function ContainerCategory() {
-	const [categories, setCategories] = useState(null);
+function ContainerTrending() {
+	const [trendings, setTrendings] = useState(null);
 
-	const getCategories = async () => {
+	const getTrendings = async () => {
 		const response = await fetch("https://fakestoreapi.com/products?limit=8");
-		const categoriesFromAPI = await response.json();
-		setCategories(categoriesFromAPI);
+		const trendingsFromAPI = await response.json();
+		setTrendings(trendingsFromAPI);
 	};
 
 	useEffect(() => {
-		getCategories();
+		getTrendings();
 	});
 
 	return (
-		<div className='container-trending'>
-			{categories ? <CategoryList categories={categories} /> : <Loading />}
-		</div>
+		<>{trendings ? <TrendingList trendings={trendings} /> : <Loading />}</>
 	);
 }
 
-export default ContainerCategory;
+export default ContainerTrending;

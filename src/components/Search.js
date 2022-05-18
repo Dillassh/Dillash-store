@@ -1,11 +1,14 @@
+import { useState } from "react";
 import "./Search.css";
 
-function Search() {
+function Search({ history }) {
 	return (
-		<div className='container_search'>
-			<input type='text' placeholder='Search...' />
-			<button>search</button>
-		</div>
+		<form>
+			<div className='container_search'>
+				<input type='text' placeholder='Search...' />
+				<button>search</button>
+			</div>
+		</form>
 	);
 }
 

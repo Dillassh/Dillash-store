@@ -10,7 +10,7 @@
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-.left-menu {
+.left-menu { 
    margin: auto;
    display: flex;
    justify-content: space-between;
@@ -32,6 +32,8 @@ a {
     left: 42%;
    text-align: center;
     top: 0;
+   
+   
     
 }
 
@@ -50,6 +52,30 @@ a {
         position: absolute;
         left: 29%;
     }
+}
+
+.nav_link {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    position: relative;
+
+}
+
+.nav_link::after {
+ content: " ";
+ position: absolute;
+ left: 0; bottom: 0;
+ width: 100%; height: 2px;
+ background-color: rgb(90, 90, 90);
+ transform: scaleX(0);
+ transform-origin: right;
+ transition: transform .5s;
+}
+
+.nav_link:hover::after {
+ transform: scaleX(1);
+ transform-origin: left;
 }
 
 

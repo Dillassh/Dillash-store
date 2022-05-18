@@ -1,16 +1,19 @@
-.container_search {
+/* .container_search {
     display: flex;
-}
-
-/* @media (min-width: 768px){
-.container_search {
-    display: flex;
-    position: relative;
-    left: -218px;
-    
+    justify-content: center;
+    margin-top: 150px;
+  
 }
 
 .container_search > input {
-    width: 400px;
+         width: 300px;
+          border-radius: 10px;
 }
+
+.container_search > button {
+    position: relative;
+    right: 67px;
+    margin: 3px;
+    border-radius: 10px;
 } */
+

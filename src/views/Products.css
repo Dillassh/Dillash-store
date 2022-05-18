@@ -1,32 +1,3 @@
- .container_product_page{
-    padding-top: 150px;
-    display: flex;
-  
+.buttn > button {
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
-
-.products_container {
-padding-top: 150px;
-}
-
-/*
-.container_product_page {
-    width: 100%;
-   
-    display: flex;
-    justify-content: center;
-}
-
-
-@media (max-width: 440px) {
-.container_product_page {
-    display: flex;
-    flex-direction: column;
-    align-content: space-around;
-    
-}
-}
-
-
-h1 {
-    width: 350px;
-} */

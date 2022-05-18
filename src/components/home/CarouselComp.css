@@ -11,33 +11,71 @@
 
 #carousel-content {
     position: absolute;
-    top: 25vh;
+    top: 2vh;
+    
     text-align: left;
-    max-width: 300px;
+    max-width: 370px;
     color: rgba(48, 45, 45, 0.925);
     
 }
 
-#carousel-content > button {
-    background-color: none;
-    padding: 5px 25px 5px 25px;
-    border: 1.5px solid black;
-    transition: 0.4s;
-    border-radius: 5px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-
-#carousel-content>button:hover {
-    opacity: 0.7;
-}
-
-#carousel-content>button:active {
-    opacity: 0.4;
-}
 
 @media (max-width: 768px) {
     #carousel-content{
-        
+        visibility: hidden;
      }
+
+     
+}
+
+#carousel-content>a {
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+    padding: 5px 15px;
+    border: 2px solid black;
+    position: relative;
+    margin-left: 10px;
+   
+    transition: 0.5s;
+}
+
+ #carousel-content>a::before,#carousel-content>a::after {
+    content: " ";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: inherit;
+    transition: all .5s;
+
+}
+
+#carousel-content>a::before {
+    top: -10px;
+    left: -10px;
+    border-width: 2px 0 0 2px;
+
+}
+
+#carousel-content>a::after {
+    bottom: -10px;
+    right: -10px;
+    border-width: 0 2px 2px 0;
+}
+
+#carousel-content>a:hover::before,#carousel-content>a:hover::after {
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    opacity: 0.8;
+}
+
+#carousel-content>a:active {
+    
+    opacity: 0.5;
+}
+
+#carousel-content>p {
+    margin-bottom: 40px;
+    height: 70px;
 }
 

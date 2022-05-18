@@ -12,29 +12,43 @@ function CarouselComp() {
 					<Carousel.Item>
 						<img className='d-block w-100' src={hairDry} alt='First slide' />
 						<Carousel.Caption id='carousel-content'>
-							<h3>First slide label</h3>
-							<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-							<button>DISCOVER MORE</button>
+							<h1>
+								High beam <br /> by Tom Chung
+							</h1>
+							<p>
+								High beam is an adjustable desk or shelf light that offers a
+								wide variety of lighting possibilities
+							</p>
+							<a href='./products'>DISCOVER MORE</a>
 						</Carousel.Caption>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img className='d-block w-100' src={lamp} alt='Second slide' />
 
 						<Carousel.Caption id='carousel-content'>
-							<h3>Second slide label</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<button>DISCOVER MORE</button>
+							<h1>
+								Handmade <br /> Hand carved coffee
+							</h1>
+							<p>
+								As rich and unique as the coffee beans it is intended for, this
+								little scoop will make yur morning ritual a specil occasionevery
+								day.
+							</p>
+
+							<a href='./products'>DISCOVER MORE</a>
 						</Carousel.Caption>
 					</Carousel.Item>
 					<Carousel.Item>
 						<img className='d-block w-100' src={boombox} alt='Third slide' />
 
 						<Carousel.Caption id='carousel-content'>
-							<h3>Third slide label</h3>
+							<h1>
+								Think different and <br /> Do otherwise
+							</h1>
 							<p>
 								Praesent commodo cursus magna, vel scelerisque nisl consectetur.
 							</p>
-							<button>DISCOVER MORE</button>
+							<a href='./products'>DISCOVER MORE</a>
 						</Carousel.Caption>
 					</Carousel.Item>
 				</Carousel>

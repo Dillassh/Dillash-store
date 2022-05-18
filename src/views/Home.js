@@ -7,8 +7,17 @@ function Home() {
 	return (
 		<div className='container'>
 			<CarouselComp />
-			<h3>Trending Products</h3>
-			<ContainerTrending />
+			<div className='trending_title'>
+				<h1>Categories</h1>
+			</div>
+			<div className='trending_title'>
+				<h1>Trending Products</h1>
+			</div>
+			<div className='row mt-5 justify-content-center'>
+				<div className='col-lg-4'>
+					<ContainerTrending />
+				</div>
+			</div>
 		</div>
 	);
 }

@@ -20,10 +20,10 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: rgb(84, 183, 196);
+  color: rgb(143, 143, 143);
 }
 
 /* selected link */
 a:active {
-  color: blue;
+  color: rgb(1, 1, 75);
 }

@@ -6,89 +6,86 @@ const Products = () => {
 	const [data, setData] = useState([]);
 	const [filter, setFilter] = useState([data]);
 	const [loading, setLoading] = useState(false);
-	let componentMounted = true;
+	let responseValid = true;
 
 	useEffect(() => {
 		const getProducts = async () => {
 			setLoading(true);
 			const response = await fetch("https://fakestoreapi.com/products");
-			if (componentMounted) {
+			if (responseValid) {
 				setData(await response.clone().json());
 				setFilter(await response.json());
 				setLoading(false);
 			}
 			return () => {
-				componentMounted = false;
+				responseValid = false;
 			};
 		};
 		getProducts();
 	}, []);
 
 	const filterProduct = (cat) => {
-		const updatedList = data.filter((x) => x.category === cat);
+		const updatedList = data.filter((item) => item.category === cat);
 		setFilter(updatedList);
 	};
 
 	const ShowProducts = () => {
 		return (
 			<>
-				<div className='buttons'>
-					<button
-						className='btn btn-outline-dark me-2'
-						onClick={() => setFilter(data)}>
-						All
-					</button>
-					<button
-						className='btn btn-outline-dark me-2'
-						onClick={() => filterProduct("men's clothing")}>
-						Men's clothing
-					</button>
-					<button
-						className='btn btn-outline-dark me-2'
-						onClick={() => filterProduct("women's clothing")}>
-						Women's clothing
-					</button>
-					<button
-						className='btn btn-outline-dark me-2'
-						onClick={() => filterProduct("electronics")}>
-						Electronics
-					</button>
-					<button
-						className='btn btn-outline-dark me-2'
-						onClick={() => filterProduct("jewelery")}>
-						Jewelery
-					</button>
+				<div className='container-fluid '>
+					<div className='row mt-5'>
+						<div className='col-md-3 mt-5  '>
+							<button
+								className='btn btn-outline-dark w-100 mb-4'
+								onClick={() => setFilter(data)}>
+								All
+							</button>
+							<button
+								className='btn btn-outline-dark w-100 mb-4'
+								onClick={() => filterProduct("men's clothing")}>
+								Men's clothing
+							</button>
+							<button
+								className='btn btn-outline-dark w-100 mb-4'
+								onClick={() => filterProduct("women's clothing")}>
+								Women's clothing
+							</button>
+							<button
+								className='btn btn-outline-dark w-100 mb-4'
+								onClick={() => filterProduct("electronics")}>
+								Electronics
+							</button>
+							<button
+								className='btn btn-outline-dark w-100 mb-4'
+								onClick={() => filterProduct("jewelery")}>
+								Jewelery
+							</button>
+						</div>
+						<div className='col-md-9'>
+							<div className='row'>
+								{filter.map((product, index) => {
+									return (
+										<>
+											<div className='col-md-4 mb-4'>
+												<Card
+													key={"product_" + index}
+													img={product.image}
+													category={product.category}
+													title={product.title}
+													price={product.price}></Card>
+											</div>
+										</>
+									);
+								})}
+							</div>
+						</div>
+					</div>
 				</div>
-				{filter.map((product, index) => {
-					return (
-						<>
-							<Card
-								key={"product_" + index}
-								img={product.image}
-								category={product.category}
-								title={product.title}
-								price={product.price}></Card>
-						</>
-					);
-				})}
 			</>
 		);
 	};
 
-	return (
-		<div>
-			<div className='container'>
-				<div className='row'>
-					<div className='col-12 mb-5'>
-						<h1 className='display-6 fw-bolder text-center'>latest products</h1>
-					</div>
-				</div>
-				<div className='row justify-content-center'>
-					{loading ? <Loading /> : <ShowProducts />}
-				</div>
-			</div>
-		</div>
-	);
+	return <div className='mt-5'>{loading ? <Loading /> : <ShowProducts />}</div>;
 };
 
 export default Products;
