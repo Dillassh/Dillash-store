@@ -1,13 +1,18 @@
 .card {
+   min-width: 200px;
     margin-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin: 5px;
 }
 
 .card-img-top {
     width: 100%;
+    
     max-width: 250px;
+    max-height: 250px;
     height: 300px;
    object-fit: contain;
+   margin: 10px;
 
 }
 
@@ -34,10 +39,18 @@
 .footer-card {
     display: flex;
     justify-content: space-between;
-   font-size: 13px;
+   font-size: 12px;
 }
 
 .card-text {
     position: relative;
-    top: 7px
+    top: 7px;
+    left: 0;
+}
+
+.footer-card > button {
+width: 130px;
+padding-left: -3px;
+padding-right: -3px;
+font-size: 13px;
 }

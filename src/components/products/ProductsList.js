@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Loading from "../Loading";
-import Card from "../Card";
+import Loading from "../../common/Loading";
+import Card from "../../common/Card";
 
 const ProductList = () => {
 	const [data, setData] = useState([]);
 	const [filter, setFilter] = useState([data]);
 	const [loading, setLoading] = useState(false);
+
 	let responseValid = true;
 
 	useEffect(() => {
@@ -25,7 +26,7 @@ const ProductList = () => {
 	}, []);
 
 	const filterProduct = (cat) => {
-		const updatedList = data.filter((x) => x.category === cat);
+		const updatedList = data.filter((item) => item.category === cat);
 		setFilter(updatedList);
 	};
 
@@ -66,7 +67,7 @@ const ProductList = () => {
 								{filter.map((product, index) => {
 									return (
 										<>
-											<div className='col-md-4 mb-4'>
+											<div className='col-sm-6 col-md-6 col-lg-4 mb-4'>
 												<Card
 													key={"product_" + index}
 													img={product.image}
@@ -85,7 +86,12 @@ const ProductList = () => {
 		);
 	};
 
-	return <div className='mt-5'>{loading ? <Loading /> : <ShowProducts />}</div>;
+	return (
+		<div className='mt-5'>
+			{/* <Search handleSearch={onSearch} /> */}
+			{loading ? <Loading /> : <ShowProducts />}
+		</div>
+	);
 };
 
 export default ProductList;

@@ -2,6 +2,8 @@
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 70px;
+    justify-content: center;
+    display: flex;
 }
 
 @media (max-width: 500px) {

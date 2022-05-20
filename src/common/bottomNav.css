@@ -1,11 +1,7 @@
 .footer {
     background-color: rgb(214, 214, 214);
     height: 129px;
-    
-    position: absolute;
-    bottom:0;
-    top: 530%;
-    
+ 
     
     width: 100%;
     display: flex;
@@ -15,6 +11,8 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     
 
 }
+
+
 
 .left-footer {
     margin: 20px;

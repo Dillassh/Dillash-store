@@ -4,7 +4,7 @@ function Card(props) {
 	return (
 		// <div className='container-card'>
 
-		<div className='card mx-3 '>
+		<div className='card  '>
 			<img src={props.img} className='card-img-top mx-auto my-2' />
 			<div className='card-body'>
 				<h3 className='card-title'>{props.title}</h3>

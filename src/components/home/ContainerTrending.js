@@ -1,6 +1,6 @@
 import "./ContainerTrending.css";
 import { useEffect, useState } from "react";
-import Loading from "../Loading";
+import Loading from "../../common/Loading";
 import TrendingList from "./TrendingList";
 
 function ContainerTrending() {
@@ -9,6 +9,7 @@ function ContainerTrending() {
 	const getTrendings = async () => {
 		const response = await fetch("https://fakestoreapi.com/products?limit=8");
 		const trendingsFromAPI = await response.json();
+
 		setTrendings(trendingsFromAPI);
 	};
 

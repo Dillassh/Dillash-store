@@ -2,8 +2,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    
 }
 
 .card_trending {
    width: 350px;
+}
+
+@media (min-width: 525px) {
+.card_trending {
+    width: 250px;
+}
 }

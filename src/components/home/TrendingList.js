@@ -1,5 +1,5 @@
 import "./TrendingList.css";
-import Card from "../Card";
+import Card from "../../common/Card";
 
 function TrendingList({ trendings }) {
 	return (
