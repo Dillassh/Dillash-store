@@ -1,4 +1,6 @@
 import "./Card.css";
+import { Button } from "reactstrap";
+import { addToWishlist } from "../helpers";
 
 function Card(props) {
 	return (

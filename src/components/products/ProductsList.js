@@ -9,7 +9,7 @@ import { Button } from "reactstrap";
 const ProductList = () => {
 	const [data, setData] = useState([]);
 	const [filter, setFilter] = useState(null);
-	const [inputValue, setInputValue] = useState("");
+	const [inputValue, setInputValue] = useState([]);
 
 	const getProducts = async () => {
 		const response = await fetch("https://fakestoreapi.com/products");
@@ -30,25 +30,30 @@ const ProductList = () => {
 		result.filter(inputValue);
 	};
 
-	const onSearch = (input) => {
-		setInputValue(input);
-	};
-
-	console.log(inputValue);
-
-	const filterByInput = (arrayProducts, value) => {
-		if (value === null) return arrayProducts;
-		return arrayProducts.filter((products) => {
-			return products.title.toLowerCase().includes(value.toLowerCase());
-		});
-	};
-
 	const ShowProducts = ({ products }) => {
+		const [q, setQ] = useState("");
+
+		const searchText = (e) => {
+			setQ(e.target.value);
+		};
+
+		const dataSearch = data.filter((item) => {
+			return Object.keys(item).some((key) =>
+				item[key].toString().toLowerCase().includes(q.toString().toLowerCase())
+			);
+		});
+
 		return (
 			<>
 				<div className='container-fluid mx-2'>
 					<div className='row mt-5 mx-2'>
 						<div className='col-md-3'>
+							<input
+								className='w-100 mb-4'
+								type='text'
+								value={q}
+								onChange={searchText.bind(this)}
+							/>
 							<button
 								className='btn btn-dark w-100 mb-4'
 								onClick={() => filterResult("men's clothing")}>
@@ -75,23 +80,23 @@ const ProductList = () => {
 						</div>
 						<div className='col-md-9'>
 							<div className='row'>
-								{data.map((product, index) => {
+								{dataSearch.map((product, index) => {
 									return (
 										<>
-											<div className='col-sm-6 col-md-6 col-lg-4 mb-4'>
+											<div
+												className='card_container col-sm-6 col-md-6 col-lg-4 mb-4 '
+												key={"product_" + index}>
 												<Card
-													key={"product_" + index}
 													img={product.image}
-													category={product.category}
 													title={product.title}
 													price={product.price}></Card>
-												<button
+												<Button
+													className='button_wish'
 													onClick={() => {
 														addToWishlist(product);
-													}}
-													className='button_wish btn btn-dark'>
-													Add to Wishlist!
-												</button>
+													}}>
+													Add to wishlist!
+												</Button>
 											</div>
 										</>
 									);

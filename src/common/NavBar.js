@@ -18,7 +18,7 @@ function NavBar() {
 			</a>
 
 			<a className='wish nav_link' href='./wishlist'>
-				Wishlist(1)
+				Wishlist<span className='badge badge-pill bg-warning'>0</span>
 			</a>
 		</div>
 	);

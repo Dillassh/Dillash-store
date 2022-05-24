@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Container, Row } from "reactstrap";
 import "./WishList.css";
+import wish from "../components/wishlist/wish.png";
 
 function WishList() {
 	const [products, setProducts] = useState([]);
@@ -23,6 +24,8 @@ function WishList() {
 
 	return (
 		<>
+			<img src={wish} alt='wish_bg' className='bg_wishlist' />
+
 			<Container className='wishlist_container'>
 				<Row>
 					{products.map((product) => {

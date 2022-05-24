@@ -1,5 +1,5 @@
 .wishlist_container {
-    margin-top: 130px;
+    margin-top: 30px;
 }
 
 .table_row {
@@ -9,5 +9,11 @@
  background-color: bisque;
  padding: 10px;
  border-radius: 15px;
- margin: 10px 10px 10px 10px;
+ margin: 10px;
+}
+
+.bg_wishlist {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
 }
