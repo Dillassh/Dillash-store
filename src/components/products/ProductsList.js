@@ -29,9 +29,10 @@ const ProductList = () => {
 		setData(result);
 		result.filter(inputValue);
 	};
-
+	let counterSize = 6;
 	const ShowProducts = ({ products }) => {
 		const [q, setQ] = useState("");
+		const [postCounter, setPostCounter] = useState(counterSize);
 
 		const searchText = (e) => {
 			setQ(e.target.value);
@@ -80,7 +81,7 @@ const ProductList = () => {
 						</div>
 						<div className='col-md-9'>
 							<div className='row'>
-								{dataSearch.map((product, index) => {
+								{dataSearch.slice(0, postCounter).map((product, index) => {
 									return (
 										<>
 											<div
@@ -101,6 +102,14 @@ const ProductList = () => {
 										</>
 									);
 								})}
+								<Button
+									className='mx-auto mb-5 '
+									style={{ width: "200px" }}
+									onClick={() => {
+										setPostCounter(postCounter + counterSize);
+									}}>
+									Show more!
+								</Button>
 							</div>
 						</div>
 					</div>
