@@ -1,37 +1,47 @@
+import React, { useEffect, useState } from "react";
+import { Button, Container, Row } from "reactstrap";
 import "./WishList.css";
-import wish from "../components/wishlist/wish.png";
-import { Button } from "reactstrap";
-
-import BotomNav from "../common/bottomNav";
-import IncerccareSiEsec from "../common/IncercareSiEsec";
 
 function WishList() {
+	const [products, setProducts] = useState([]);
+
+	useEffect(() => {
+		const productsListStorage = localStorage.getItem("productList");
+		if (productsListStorage) {
+			const productArray = JSON.parse(productsListStorage);
+			setProducts(productArray);
+		}
+	}, []);
+
+	const onDelete = (id) => {
+		const filterdArray = products.filter((product) => {
+			return product.id !== id;
+		});
+		setProducts(filterdArray);
+		localStorage.setItem("productList", JSON.stringify(filterdArray));
+	};
+
 	return (
 		<>
-			<div className='wishlist_container'>
-				<img src={wish} alt='wish' />
-
-				<table className='col-md-9'>
-					<tr>
-						<td>1</td>
-						<td>img</td>
-						<td>product name</td>
-						<td>
-							<Button outline>DELETE</Button>
-						</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>img</td>
-						<td>product name</td>
-						<td>
-							<Button outline>DELETE</Button>
-						</td>
-					</tr>
-				</table>
-				<IncerccareSiEsec add='ADD' delete='DELETE' reset='RESET ALL' />
-				<BotomNav />
-			</div>
+			<Container className='wishlist_container'>
+				<Row>
+					{products.map((product) => {
+						return (
+							<div className='table_row' key={"product_wishlist_" + product.id}>
+								<h3 className='mx-2'>{product.title}</h3>
+								<Button
+									onClick={() => {
+										onDelete(product.id);
+									}}
+									className='mx-2'
+									color='danger'>
+									Delete
+								</Button>
+							</div>
+						);
+					})}
+				</Row>
+			</Container>
 		</>
 	);
 }

@@ -12,7 +12,6 @@ function Card(props) {
 					<p className='price'>{props.price} $</p>
 					<div className='footer-card'>
 						<p className='card-text'>{props.category}</p>
-						<button className='btn btn-dark'>Add to Wishlist!</button>
 					</div>
 				</div>
 			</div>

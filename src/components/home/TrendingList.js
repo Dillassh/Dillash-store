@@ -1,5 +1,6 @@
 import "./TrendingList.css";
 import Card from "../../common/Card";
+import { addToWishlist } from "../../helpers";
 
 function TrendingList({ trendings }) {
 	return (
@@ -12,6 +13,13 @@ function TrendingList({ trendings }) {
 							img={trending.image}
 							title={trending.title}
 							price={trending.price}></Card>
+						<button
+							onClick={() => {
+								addToWishlist(trending);
+							}}
+							className='button_wish btn btn-dark'>
+							Add to Wishlist!
+						</button>
 					</div>
 				);
 			})}

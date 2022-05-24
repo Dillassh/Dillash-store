@@ -1,47 +1,13 @@
-
 .wishlist_container {
-display: flex;
-flex-direction: column;
-margin-top: 55px;
-
-align-items: center;
+    margin-top: 130px;
 }
 
-@media (max-width:500px) {
-.wishlist_container { 
-    margin-top: 100px;
-}
-
-
-
-}
-
-.wishlist_container > img {
-    position: relative;
-    width: 100%;
-}
-
-.wishlist_container > p {
-    font-size: 45px;
-    color: aliceblue;
-    position: absolute;
-    top:250px;
-    left: 550px;
-}
-
-table {
-    height: 100px;
-   
-    border: 1px solid black;
-    margin-top: 50px;
-}
-
-tr td {
-    border: 1px solid black;
-}
-
-td > Button {
-    float: right;
-    margin: 10px;
-    
+.table_row {
+ display: flex;
+ justify-content: space-between;
+ 
+ background-color: bisque;
+ padding: 10px;
+ border-radius: 15px;
+ margin: 10px 10px 10px 10px;
 }
