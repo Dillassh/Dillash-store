@@ -1,7 +1,9 @@
 .footer {
     background-color: rgb(214, 214, 214);
     height: 129px;
- 
+    position: absolute;
+    padding-left: 10vw ;
+    padding-right: 10vw ;
     
     width: 100%;
     display: flex;
@@ -12,6 +14,11 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 }
 
+.icons {
+    margin: 0 5px 0 5px;
+    font-size: 30px;
+}
+
 
 
 .left-footer {
@@ -19,18 +26,16 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 10vw;
+   
 }
 
 .right-footer {
     float: right;
-    margin-right: 10vw;
+    
+    min-width: 150px;
 }
 
-.right-footer > img {
-    width: 50px;
-   
-}
+
 
 .brand-registered {
     color: rgb(138, 136, 136);
@@ -40,16 +45,23 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 @media (max-width:440px) {
+.icons {
+        margin: 0 5px 0 5px;
+        font-size: 30px;
+    }
+
     .footer {
-        height: 150px;
+        padding-top: 3vh;
+        height: 200px;
         display: flex;
         flex-direction: column;
         text-align: center;
+        align-content: space-between;
     }
 
     .right-footer {
         width: 50px;
-       margin-bottom: 25vh;
+       margin-bottom: 5vh;
        
         display: flex;
         justify-content: center;

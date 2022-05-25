@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Button, Container, Row } from "reactstrap";
 import "./WishList.css";
 import wish from "../components/wishlist/wish.png";
+import Footer from "../common/Footer";
 
 function WishList() {
 	const [products, setProducts] = useState([]);
@@ -45,6 +46,8 @@ function WishList() {
 					})}
 				</Row>
 			</Container>
+
+			<Footer className='footer_wish' />
 		</>
 	);
 }

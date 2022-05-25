@@ -1,5 +1,6 @@
 .wishlist_container {
     margin-top: 30px;
+    min-height: 100vh;
 }
 
 .table_row {
@@ -17,3 +18,4 @@
     height: 50vh;
     object-fit: cover;
 }
+

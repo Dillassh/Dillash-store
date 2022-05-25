@@ -1,4 +1,4 @@
-import BotomNav from "../common/bottomNav";
+import Footer from "../common/Footer";
 
 import ProductList from "../components/products/ProductsList";
 import "./Products.css";
@@ -10,7 +10,7 @@ function Products() {
 				<ProductList />
 			</div>
 
-			<BotomNav />
+			<Footer />
 		</>
 	);
 }

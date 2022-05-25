@@ -3,7 +3,7 @@ import "./Home.css";
 import CarouselComp from "../components/home/CarouselComp";
 import ContainerTrending from "../components/home/ContainerTrending";
 import CategoryCards from "../components/home/CategoryCards";
-import BotomNav from "../common/bottomNav";
+import Footer from "../common/Footer";
 
 function Home() {
 	return (
@@ -19,7 +19,7 @@ function Home() {
 				</div>
 				<ContainerTrending />
 			</div>
-			<BotomNav />
+			<Footer />
 		</>
 	);
 }

@@ -4,6 +4,7 @@
     margin-top: 70px;
     justify-content: center;
     display: flex;
+    min-height:70vh;
 }
 
 @media (max-width: 500px) {
