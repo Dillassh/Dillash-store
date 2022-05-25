@@ -1,10 +1,11 @@
 .button_wish {
     position: relative;
-    bottom: 65px;
-    left: 130px;
-    width: 110px;
+    bottom: 60px;
+    left: 120px;
+    width: 100px;
     font-size: 12px;
-    z-index: 100;
-    margin-right: 10px;
+    background-color: none;
+    
+   
 }
 
