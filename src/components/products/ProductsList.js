@@ -85,7 +85,7 @@ const ProductList = () => {
 									return (
 										<>
 											<div
-												className='card_container col-sm-6 col-md-6 col-lg-4 mb-4 '
+												className='card_container col-sm-6 col-md-6 col-lg-4 '
 												key={"product_" + index}>
 												<Card
 													img={product.image}
