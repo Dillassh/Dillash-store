@@ -32,12 +32,13 @@ function WishList() {
 					{products.map((product) => {
 						return (
 							<div className='table_row' key={"product_wishlist_" + product.id}>
+								<img className='img_wish mx-2' src={product.image} alt='img' />
 								<h3 className='mx-2'>{product.title}</h3>
 								<Button
 									onClick={() => {
 										onDelete(product.id);
 									}}
-									className='mx-2'
+									className='btn_wish'
 									color='danger'>
 									Delete
 								</Button>
