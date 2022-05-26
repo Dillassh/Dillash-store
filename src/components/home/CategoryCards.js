@@ -9,7 +9,7 @@ function CategoryCards() {
 	return (
 		<div className='category_container'>
 			<div className='cards_category'>
-				<img src={category1} />
+				<img alt='cat' src={category1} />
 				<div className='cards_text'>
 					<h3>Men's clothing</h3>
 					<Button outline size='sm'>
@@ -18,7 +18,7 @@ function CategoryCards() {
 				</div>
 			</div>
 			<div className='cards_category'>
-				<img src={category2} />
+				<img alt='cat' src={category2} />
 				<div className='cards_text'>
 					<h3>Women's clothing</h3>
 					<Button outline size='sm'>
@@ -27,7 +27,7 @@ function CategoryCards() {
 				</div>
 			</div>
 			<div className='cards_category'>
-				<img src={category3} />
+				<img alt='cat' src={category3} />
 				<div className='cards_text'>
 					<h3>Electronics</h3>
 					<Button outline size='sm'>
@@ -36,7 +36,7 @@ function CategoryCards() {
 				</div>
 			</div>
 			<div className='cards_category'>
-				<img src={category4} />
+				<img alt='cat' src={category4} />
 				<div className='cards_text'>
 					<h3>Jewelery</h3>
 					<Button outline size='sm'>

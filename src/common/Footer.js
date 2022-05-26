@@ -1,5 +1,5 @@
 import "./Footer.css";
-import logoDilla from "./logo-dillash.png";
+
 import { BsFacebook } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";

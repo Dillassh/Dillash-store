@@ -11,14 +11,10 @@ function TrendingList({ trendings }) {
 						<Card
 							img={trending.image}
 							title={trending.title}
-							price={trending.price}></Card>
-						<button
-							onClick={() => {
+							price={trending.price}
+							addToWish={() => {
 								addToWishlist(trending);
-							}}
-							className='button_wish btn btn-dark'>
-							Add to Wishlist!
-						</button>
+							}}></Card>
 					</div>
 				);
 			})}

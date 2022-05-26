@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Loading from "../../common/Loading";
 import Card from "../../common/Card";
-import Search from "./Search";
 import "./ProductList.css";
 import { addToWishlist } from "../../helpers";
 import { Button } from "reactstrap";
@@ -9,7 +8,6 @@ import { Button } from "reactstrap";
 const ProductList = () => {
 	const [data, setData] = useState([]);
 	const [filter, setFilter] = useState(null);
-	const [inputValue, setInputValue] = useState([]);
 
 	const getProducts = async () => {
 		const response = await fetch("https://fakestoreapi.com/products");
@@ -27,7 +25,6 @@ const ProductList = () => {
 			return item.category === catItem;
 		});
 		setData(result);
-		result.filter(inputValue);
 	};
 	let counterSize = 6;
 	const ShowProducts = ({ products }) => {
@@ -90,20 +87,17 @@ const ProductList = () => {
 												<Card
 													img={product.image}
 													title={product.title}
-													price={product.price}></Card>
-												<Button
-													className='button_wish'
-													onClick={() => {
+													price={product.price}
+													addToWish={() => {
 														addToWishlist(product);
-													}}>
-													Add to wishlist!
-												</Button>
+													}}
+												/>
 											</div>
 										</>
 									);
 								})}
 								<Button
-									className='mx-auto mb-5 '
+									className='mx-auto mb-5 mt-5 '
 									style={{ width: "200px" }}
 									onClick={() => {
 										setPostCounter(postCounter + counterSize);
