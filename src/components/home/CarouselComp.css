@@ -31,7 +31,8 @@
 #carousel-content>a {
     text-decoration: none;
     font-size: 17px;
-    color: black;
+    color: rgba(48, 45, 45, 0.925);
+        
     padding: 5px 15px;
     border: 2px solid black;
     position: relative;
