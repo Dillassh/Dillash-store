@@ -43,8 +43,8 @@ const ProductList = () => {
 
 		return (
 			<>
-				<div className='container-fluid mx-2'>
-					<div className='row mt-5 mx-2'>
+				<div className='container-fluid '>
+					<div className='row mt-5 '>
 						<div className='col-md-3'>
 							<input
 								className='w-100 mb-4'
@@ -82,7 +82,7 @@ const ProductList = () => {
 									return (
 										<>
 											<div
-												className='card_container col-sm-6 col-md-6 col-lg-4 '
+												className='card_container col-sm-12 col-md-6 col-lg-4 mb-3 '
 												key={"product_" + index}>
 												<Card
 													img={product.image}

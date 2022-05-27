@@ -1,20 +1,16 @@
 .card {
-   min-width: 200px;
+    min-width: 200px;
     margin-bottom: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     margin: 5px;
-    background-color: #F5F5F5;
 }
 
 .card-img-top {
     width: 100%;
-    
-    max-width: 250px;
+    max-width: 200px;
     max-height: 250px;
     height: 300px;
-   object-fit: contain;
-   margin: 10px;
-
+    object-fit: contain;
 }
 
 .card-title {
@@ -27,7 +23,7 @@
 
 .price {
     font-weight: 600;
-    font-size: 28px;
+    font-size: 25px;
  
     color: rgb(46, 148, 97);
     margin-bottom: 10px;
