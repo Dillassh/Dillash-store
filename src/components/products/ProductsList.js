@@ -58,17 +58,36 @@ const ProductList = () => {
 			);
 		});
 
+		// if the dataSearch is empty, we will show the message "No products found" and add button to clear the input value
+		if (dataSearch.length === 0) {
+			return (
+				<div className='mt-5 no_products'>
+					<h1>No products found</h1>
+					<Button
+						color='secondary'
+						className='d-flex justify-content-center mx-auto mt-2 clear_search_btn'
+						onClick={() => {
+							setQ("");
+						}}>
+						Back to products
+					</Button>
+				</div>
+			);
+		}
+
 		return (
 			<>
 				<div className='container-fluid '>
 					<div className='row mt-5 '>
 						<div className='col-md-3'>
-							<input
-								className='w-100 mb-4'
-								type='text'
-								value={q}
-								onChange={searchText.bind(this)}
-							/>
+							<form>
+								<input
+									className='w-100 mb-4'
+									type='text'
+									value={q}
+									onChange={searchText.bind(this)}
+								/>
+							</form>
 							<button
 								className='btn btn-dark w-100 mb-4'
 								onClick={() => filterResult("men's clothing")}>
@@ -77,7 +96,7 @@ const ProductList = () => {
 							<button
 								className='btn btn-dark w-100 mb-4'
 								onClick={() => filterResult("women's clothing")}>
-								Women's clothing
+								Women
 							</button>
 							<button
 								className='btn btn-dark w-100 mb-4'

@@ -5,18 +5,16 @@ import "./NavBar.css";
 function NavBar() {
 	// use span to display the count of the products in the wishlist
 	const [count, setCount] = useState(null);
-	// create a function to get the count of the products in the wishlist
-	const getCount = () => {
+
+	// here I use useEffect hook to get the data from the local storage and unstringify it
+	// with parseJSON and set the count to the state hook setCount with the length of the array
+	useEffect(() => {
 		const productsListStorage = localStorage.getItem("productList");
 		if (productsListStorage) {
 			const productArray = JSON.parse(productsListStorage);
 			setCount(productArray.length);
 		}
-	};
-	// use useEffect hook to get the count of the products in the wishlist
-	useEffect(() => {
-		getCount();
-	}, [count]);
+	}, []);
 
 	return (
 		<div className='topNav'>
