@@ -7,7 +7,7 @@ function TrendingList({ trendings }) {
 		<div className='trending_cards'>
 			{trendings.map((trending, index) => {
 				return (
-					<div className='card_trending' key={"trending_" + index}>
+					<div className='card_trending mx-2 mb-2' key={"trending_" + index}>
 						<Card
 							img={trending.image}
 							title={trending.title}

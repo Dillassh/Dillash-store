@@ -5,8 +5,10 @@ import wish from "../components/wishlist/wish.png";
 import Footer from "../common/Footer";
 
 function WishList() {
+	//take data from the api with a useState hook
 	const [products, setProducts] = useState([]);
 
+	// here I use useEffect hook to get the data from the local storage and unstringify it with parseJSON
 	useEffect(() => {
 		const productsListStorage = localStorage.getItem("productList");
 		if (productsListStorage) {
@@ -15,11 +17,15 @@ function WishList() {
 		}
 	}, []);
 
+	// onDelete is a function that will be used to delete the product from the wishlist
 	const onDelete = (id) => {
+		// here I use filter to filter the products by the id and return the products that are not the id
 		const filterdArray = products.filter((product) => {
 			return product.id !== id;
 		});
+		// I set the filterdArray to the state hook setProducts
 		setProducts(filterdArray);
+		// I set the filterdArray to the local storage with stringify
 		localStorage.setItem("productList", JSON.stringify(filterdArray));
 	};
 

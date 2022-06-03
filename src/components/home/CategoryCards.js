@@ -12,7 +12,7 @@ function CategoryCards() {
 				<img alt='cat' src={category1} />
 				<div className='cards_text'>
 					<h3>Men's clothing</h3>
-					<Button outline size='sm'>
+					<Button href='./products' outline size='sm'>
 						DISCOVER MORE
 					</Button>
 				</div>
@@ -21,7 +21,7 @@ function CategoryCards() {
 				<img alt='cat' src={category2} />
 				<div className='cards_text'>
 					<h3>Women's clothing</h3>
-					<Button outline size='sm'>
+					<Button href='./products' outline size='sm'>
 						DISCOVER MORE
 					</Button>
 				</div>
@@ -30,7 +30,7 @@ function CategoryCards() {
 				<img alt='cat' src={category3} />
 				<div className='cards_text'>
 					<h3>Electronics</h3>
-					<Button outline size='sm'>
+					<Button href='./products' outline size='sm'>
 						DISCOVER MORE
 					</Button>
 				</div>
@@ -39,7 +39,7 @@ function CategoryCards() {
 				<img alt='cat' src={category4} />
 				<div className='cards_text'>
 					<h3>Jewelery</h3>
-					<Button outline size='sm'>
+					<Button href='./products' outline size='sm'>
 						DISCOVER MORE
 					</Button>
 				</div>
