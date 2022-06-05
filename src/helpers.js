@@ -1,5 +1,6 @@
 export const addToWishlist = (product) => {
 	console.log(product);
+
 	const productsListStorage = localStorage.getItem("productList");
 	// console.log(productsListStorage);
 

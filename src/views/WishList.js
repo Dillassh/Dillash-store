@@ -5,7 +5,7 @@ import wish from "../components/wishlist/wish.png";
 import Footer from "../common/Footer";
 
 function WishList() {
-	//take data from the api with a useState hook
+	//take data from the local storage and set it to the state of the component
 	const [products, setProducts] = useState([]);
 
 	// here I use useEffect hook to get the data from the local storage and unstringify it with parseJSON
@@ -32,6 +32,7 @@ function WishList() {
 	return (
 		<>
 			<img src={wish} alt='wish_bg' className='bg_wishlist' />
+			<h1 className='wishlist_title'>WishList.</h1>
 
 			<Container className='wishlist_container'>
 				<Row>
@@ -39,7 +40,8 @@ function WishList() {
 						return (
 							<div className='table_row' key={"product_wishlist_" + product.id}>
 								<img className='img_wish mx-2' src={product.image} alt='img' />
-								<h3 className='mx-2'>{product.title}</h3>
+								<h3 className='title_product mx-2'>{product.title}</h3>
+								<h3 className='price mx-2'>{product.price} $</h3>
 								<Button
 									onClick={() => {
 										onDelete(product.id);
