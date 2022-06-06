@@ -22,7 +22,7 @@
  display: flex;
  justify-content: space-between;
  align-items: center;
- background-color: rgb(241, 241, 240);
+ /* background-color: rgb(241, 241, 240); */
  padding: 10px;
  margin: 10px;
  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -40,7 +40,7 @@
     width: 90px;
     height: 40px;
     border-radius: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(228, 228, 228);
     border: 1px solid rgb(77, 77, 77);
     color: rgb(0, 0, 0);
     font-size: 15px;
@@ -94,6 +94,11 @@
     .wishlist_title {
         top:34vh;
         left: 3vw;
+    }
+
+    .title_product {
+        font-size: 15px;
+        max-height: 50px;
     }
 }
 
